@@ -47,12 +47,12 @@ img {
 }
 
 .hero {
-    min-height: 89vh;
+    min-height: 70vh;
     padding: 1.5rem clamp(1rem, 4vw, 4rem) 4rem;
     background:
         linear-gradient(105deg, rgba(8, 11, 8, 0.86) 35%, rgba(8, 11, 8, 0.35) 100%),
         url("img/grande-parte.jpg") center/cover no-repeat;
-    position: relative;
+   /* position: relative;*/
     overflow: hidden;
     background-attachment: fixed;
 }
@@ -98,7 +98,7 @@ img {
 .menu {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    gap: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     font-size: 1.15rem;
@@ -201,7 +201,7 @@ img {
 
 main {
     max-width: 1200px;
-    margin: -2.5rem auto 0;
+    margin: -2,5rem auto 0;
     padding: 0 clamp(1rem, 4vw, 3rem) 4rem;
     position: relative;
     z-index: 4;
@@ -508,7 +508,7 @@ footer {
     }
 
     main {
-        margin-top: -1.6rem;
+        margin-top: 0.4rem;
     }
 }
 
