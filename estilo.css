@@ -47,20 +47,21 @@ img {
 }
 
 .hero {
-    min-height: 70vh;
+    min-height: 50vh;
     padding: 1.5rem clamp(1rem, 4vw, 4rem) 4rem;
     background:
-        linear-gradient(105deg, rgba(8, 11, 8, 0.86) 35%, rgba(8, 11, 8, 0.35) 100%),
+linear-gradient(105deg, rgba(8, 11, 8, 0.86) 35%, rgba(8, 11, 8, 0.35) 100%),
         url("img/grande-parte.jpg") center/cover no-repeat;
-   position: relative;
-    background-attachment: fixed;
+    position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: repeatinglinear-gradient(
+    background: repeating-linear-gradient(
         -55deg,
         rgba(255, 255, 255, 0.04) 0 1px,
         transparent 1px 20px
@@ -160,6 +161,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     width: min(100%, 650px);
+    text-align: center;
     animation: entrar 0.8s ease both;
 }
 
@@ -173,7 +175,7 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
 }
 
 .hero h1 {
@@ -187,6 +189,7 @@ img {
 
 .hero-texto {
     max-width: 50ch;
+    margin: 0 auto;
     font-size: 1.35rem;
     color: var(--texto-fraco);
 }
@@ -194,13 +197,14 @@ img {
 .hero-acoes {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.8rem;
     margin-top: 1.6rem;
 }
 
 main {
     max-width: 1200px;
-    margin: -2,5rem auto 0;
+    margin: -2.5rem auto 0;
     padding: 0 clamp(1rem, 4vw, 3rem) 4rem;
     position: relative;
     z-index: 4;
@@ -260,7 +264,7 @@ main {
 }
 
 .sobre-imagens img:first-child {
-    transform: translateY(24px);
+    transform: none;
 }
 
 .sobre-conteudo h2,
@@ -281,7 +285,7 @@ main {
 
 .sobre-conteudo ul {
     list-style: none;
-    margin-top: 1.1rem;
+    margin-top: 1.2rem;
     display: grid;
     gap: 0.5rem;
 }
@@ -289,14 +293,17 @@ main {
 .sobre-conteudo li {
     position: relative;
     padding-left: 1.1rem;
-    font-size: 1.08rem;
+     
 }
 
 .sobre-conteudo li::before {
-     content: "";{
-    margin-left: 30px;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 999px;
     background: linear-gradient(120deg, var(--verde), #ffd25d);
     color: #101216;
@@ -309,31 +316,38 @@ main {
 }
     
   
-}
+
 .servicos {
     margin-bottom: 4rem;
 }
 
+.servicos > h2 {
+    text-align: center;
+}
+
 .secao-descricao {
-   
     color: var(--texto-fraco);
     font-size: 1.2rem;
+    text-align: center;
+    margin-inline: auto;
     margin-bottom: 1.2rem;
 }
 
 .servicos-grid {
-    
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
 .card-servico {
+    
     background: linear-gradient(165deg, rgba(30, 77, 47, 0.24), rgba(17, 23, 18, 0.95));
     border: 1px solid var(--borda);
     border-top: 3px solid var(--verde);
     border-radius: 1rem;
     padding: 10px ;
+    width: min(100%, 260px);
     min-height: 210px;
     display: flex;
     flex-direction: column;
@@ -357,9 +371,9 @@ main {
 /* botoes de agendamento corte de cabelo */
 
 .platinado {
-  margin-left: 32%;
+    text-align: center;
     font-family: var(--font-titulo);
-    margin-left: 32px;
+    margin-left: 0;
     color: var(--verde);
     letter-spacing: 0.04em;
 
@@ -367,8 +381,8 @@ main {
 
 
 button#masculino {
-     margin-left: 35%;
-    margin-top: 1rem;
+   display: block;
+    margin: 0 auto;
     padding: 0.5rem 1rem;
     border-radius: 999px;
     background: linear-gradient(120deg, var(--verde), #ffd25d);
@@ -387,12 +401,13 @@ button#masculino:hover {
 }
 
 .card-servico span {
-    margin-left: 33%;
+    display: block;
+    margin: 1rem auto 0;
     font-family: var(--font-titulo);
     font-size: 2rem;
     color: var(--dourado);
     letter-spacing: 0.04em;
-    margin-top: 1rem;
+    text-align: center;
 }
 
 .galeria {
@@ -402,12 +417,17 @@ button#masculino:hover {
 .galeria-topo p {
     color: var(--texto-fraco);
     font-size: 1.2rem;
+    text-align: center;
     margin-bottom: 1.2rem;
+}
+
+.galeria-topo {
+    text-align: center;
 }
 
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -420,8 +440,8 @@ button#masculino:hover {
 }
 
 .galeria-grid img:first-child {
-    grid-column: span 2;
-    height: 320px;
+    grid-column: span 1;
+    height: 280px;
 }
 
 .contato {
@@ -430,17 +450,20 @@ button#masculino:hover {
     border-radius: 1.2rem;
     background: linear-gradient(120deg, rgba(30, 77, 47, 0.32), rgba(17, 23, 18, 0.88));
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .contato p {
     font-size: 1.15rem;
     color: var(--texto-fraco);
+    margin-inline: auto;
     margin-bottom: 1.2rem;
 }
 
 .contato-acoes {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
 }
 
@@ -466,8 +489,7 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    .destaques,
-    .servicos-grid {
+    .destaques {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -484,7 +506,7 @@ footer {
     }
 
     .galeria-grid img:first-child {
-        grid-column: span 2;
+        grid-column: span 1;
     }
 }
 
@@ -509,9 +531,10 @@ footer {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 768px) {
     .hero {
         padding-top: 1rem;
+        
     }
 
     .topo {
@@ -527,7 +550,6 @@ footer {
     }
 
     .destaques,
-    .servicos-grid,
     .galeria-grid {
         grid-template-columns: 1fr;
     }
@@ -540,6 +562,10 @@ footer {
 
     .contato {
         padding: 1.2rem;
+    }
+
+    .card-servico {
+        width: min(100%, 420px);
     }
 
     .botao {
