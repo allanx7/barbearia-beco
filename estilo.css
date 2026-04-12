@@ -384,8 +384,82 @@ main {
     margin-bottom: 4rem;
 }
 
-.servicos > h2 {
+.servicos h2 {
     text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.servicos p {
+    text-align: center;
+    color: var(--texto-fraco);
+    margin: 0 auto 1.8rem;
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+.servicos table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(17, 23, 18, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.servicos th,
+.servicos td {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.servicos th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.95rem;
+    color: var(--dourado);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.servicos td {
+    color: var(--texto-fraco);
+    font-size: 1rem;
+}
+
+.servicos tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.servicos .botao-agendar {
+    margin-top: 0;
+    padding: 0.8rem 1rem;
+    display: inline-flex;
+}
+
+.combos-especiais {
+    background: linear-gradient(135deg, rgba(30, 77, 47, 0.1), rgba(17, 23, 18, 0.05));
+    border: 2px solid var(--verde);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.combos-especiais::before {
+    content: "⭐ OFERTA ESPECIAL ⭐";
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--verde);
+    color: #101216;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .secao-descricao {
@@ -405,6 +479,44 @@ main {
 .catalogos-topo {
     text-align: center;
     margin-bottom: 2.2rem;
+}
+
+.tabela-precos {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.tabela-precos table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(17, 23, 18, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.tabela-precos th,
+.tabela-precos td {
+    padding: 1rem 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tabela-precos th {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.95rem;
+    color: var(--dourado);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tabela-precos td {
+    color: var(--texto-fraco);
+    font-size: 1rem;
+}
+
+.tabela-precos tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .catalogos-grid {
@@ -632,6 +744,50 @@ main {
     justify-content: center;
 }
 
+.servicos-tabela {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.servicos-tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(17, 23, 18, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.servicos-tabela th,
+.servicos-tabela td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.servicos-tabela th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.95rem;
+    color: var(--dourado);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.servicos-tabela td {
+    color: var(--texto-fraco);
+    font-size: 1rem;
+}
+
+.servicos-tabela tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.servicos-tabela .botao-agendar {
+    margin-top: 0;
+    padding: 0.8rem 1rem;
+    display: inline-flex;
+}
+
 .card-servico {
     
     background: linear-gradient(165deg, rgba(30, 77, 47, 0.24), rgba(17, 23, 18, 0.95));
@@ -648,16 +804,42 @@ main {
 .card-servico h3 {
     margin-top: 20px;
     font-family: var(--font-titulo);
-    font-size: 2rem;
-    letter-spacing: 0.03em;
+    font-size: 1.7rem;
+    letter-spacing: 0.02em;
 }
 
 .card-servico p {
-    
     color: var(--texto-fraco);
     flex: 1;
     font-size: 1.09rem;
     margin-top: 0.5rem;
+}
+
+.servico-precos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+}
+
+.servico-dia,
+.servico-valor {
+    display: block;
+    text-align: center;
+}
+
+.servico-dia {
+    color: var(--texto-fraco);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.servico-valor {
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    color: var(--dourado);
+    letter-spacing: 0.03em;
 }
 
 /* botoes de agendamento corte de cabelo */
@@ -675,7 +857,6 @@ main {
 .botao-agendar {
     background: linear-gradient(120deg, var(--verde), #ffd25d);
     color: #101216;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
     margin-top: 2rem;
 }
 
@@ -966,12 +1147,6 @@ section.maps {
 
 .botao-google::before {
     content: "⭐";
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.botao-ios::before {
-    content: "";
-    font-family: sans-serif;
     background: rgba(255, 255, 255, 0.12);
 }
 
