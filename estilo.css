@@ -42,6 +42,7 @@ body {
       linear-gradient(105deg, rgba(0, 0, 0, 0.24) 35%, rgba(0, 0, 0, 0.10) 100%),
       url("img/beco barbearia.jpg") center/cover no-repeat;
     background-blend-mode: multiply;
+    background-attachment: fixed;
     position: relative;
     background-position: center;
     background-size: cover;
