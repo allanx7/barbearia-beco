@@ -30,8 +30,8 @@ body {
     color: var(--texto);
     line-height: 1.10;
     background:
-        radial-gradient(circle at 85% -10%, rgba(240, 177, 0, 0.22), transparent 38%),
-        radial-gradient(circle at 0% 70%, #f0b1001f, transparent 45%),
+        radial-gradient(circle at 85% -10%, rgba(0, 0, 0, 0.22), transparent 38%),
+        radial-gradient(circle at 0% 70%, #0000001f, transparent 45%),
         linear-gradient(160deg, var(--fundo-1), var(--fundo-2) 60%, #0f1014);
 }
 
