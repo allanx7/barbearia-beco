@@ -54,7 +54,7 @@ linear-gradient(105deg, rgba(8, 11, 8, 0.86) 35%, rgba(8, 11, 8, 0.35) 100%),
         url("img/grande-parte.jpg") center/cover no-repeat;
     position: relative;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 .hero::before {
