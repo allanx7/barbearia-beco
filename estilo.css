@@ -43,7 +43,7 @@ body {
       url("img/beco barbearia.jpg") center/cover no-repeat;
     background-blend-mode: multiply;
     position: relative;
-    background-position: center 35%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -58,14 +58,6 @@ body {
     text-transform: uppercase;
     text-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     max-width: 12ch;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 8px);
-    pointer-events: none;
 }
 
 
@@ -267,7 +259,7 @@ p.hero-texto {
 
 main {
     max-width: 1200px;
-    margin: -2.6rem auto 0;
+    margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 3rem) 4rem;
     position: relative;
     z-index: 4;
