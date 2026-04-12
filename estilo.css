@@ -36,16 +36,37 @@ body {
 }
 
 .hero {
-    min-height: 60vh;
+    min-height: 55vh;
     padding: 1.5rem clamp(1rem, 4vw, 4rem) 4rem;
     background:
-      linear-gradient(105deg, rgba(8, 11, 8, 0.55) 35%, rgba(8, 11, 8, 0.20) 100%),
+      linear-gradient(105deg, rgba(0, 0, 0, 0.24) 35%, rgba(0, 0, 0, 0.10) 100%),
       url("img/beco barbearia.jpg") center/cover no-repeat;
+    background-blend-mode: multiply;
     position: relative;
-    background-position: center;
+    background-position: center 35%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
+.hero h1 {
+    font-family: var(--font-titulo);
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 0.85;
+    letter-spacing: 0.08em;
+    margin: 1rem auto 0.7rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    max-width: 12ch;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 8px);
+    pointer-events: none;
+}
 
 
 a {
@@ -217,18 +238,23 @@ p.hero-texto {
 
 .hero h1 {
     font-family: var(--font-titulo);
-    font-size: clamp(3.3rem, 12vw, 8rem);
-    line-height: 0.9;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 0.85;
+    letter-spacing: 0.08em;
+    margin: 1rem auto 0.7rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    max-width: 12ch;
 }
 
 .hero-texto {
-    max-width: 50ch;
+    max-width: 54ch;
     margin: 0 auto;
+    padding-bottom: 1.8rem;
     font-size: 1.35rem;
-    color: var(--texto-fraco);
+    line-height: 1.8;
+    color: #e6e6e6;
 }
 
 .hero-acoes {
