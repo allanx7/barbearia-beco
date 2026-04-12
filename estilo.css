@@ -312,7 +312,6 @@ main {
   
 }
 .servicos {
-    
     margin-bottom: 4rem;
 }
 
@@ -331,7 +330,6 @@ main {
 }
 
 .card-servico {
-    
     background: linear-gradient(165deg, rgba(30, 77, 47, 0.24), rgba(17, 23, 18, 0.95));
     border: 1px solid var(--borda);
     border-top: 3px solid var(--verde);
@@ -350,7 +348,7 @@ main {
 }
 
 .card-servico p {
-   
+    
     color: var(--texto-fraco);
     flex: 1;
     font-size: 1.09rem;
@@ -360,7 +358,7 @@ main {
 /* botoes de agendamento corte de cabelo */
 
 .platinado {
-  margin-left: 32px;
+  margin-left: 34%;
     font-family: var(--font-titulo);
     margin-left: 32px;
     color: var(--verde);
@@ -370,7 +368,7 @@ main {
 
 
 button#masculino {
-     margin-left: 30%;
+     margin-left: 35%;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 999px;
