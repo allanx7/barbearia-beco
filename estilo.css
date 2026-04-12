@@ -563,7 +563,11 @@ footer {
 @media (max-width: 768px) {
     .hero {
         padding-top: 1rem;
-        
+        background:
+          linear-gradient(105deg, rgba(8, 11, 8, 0.55) 35%, rgba(8, 11, 8, 0.20) 100%),
+          url("img/beco barbearia.jpg") center/contain no-repeat;
+        background-position: center;
+        min-height: 45vh;
     }
 
     .topo {
