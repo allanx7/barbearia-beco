@@ -391,7 +391,7 @@ main {
 }
 
 .card-servico h3 {
-    margin-top: -10px;
+    margin-top: 20px;
     font-family: var(--font-titulo);
     font-size: 2rem;
     letter-spacing: 0.03em;
@@ -421,7 +421,7 @@ main {
     background: linear-gradient(120deg, var(--verde), #ffd25d);
     color: #101216;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .botao-agendar:hover {
