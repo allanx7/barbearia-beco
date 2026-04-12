@@ -50,6 +50,8 @@ body {
 }
 
 .hero h1 {
+    position: relative;
+    
     font-family: var(--font-titulo);
     font-size: clamp(3rem, 8vw, 5.6rem);
     line-height: 0.85;
@@ -87,7 +89,7 @@ img {
 
 
 p.hero-texto {
-    padding-bottom: 90px;
+    padding-bottom: 20px;
     gap: 20px;
    display: inline-flex;
 }
@@ -95,7 +97,7 @@ p.hero-texto {
 
 
 .hero-conteudo {   
-    padding-bottom: 20%;
+    padding-bottom: 10%;
 }
 
 
